@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="/dmxAppConnect/dmxAppConnect.js"></script>
+  <base href="/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Dashboard - Admin</title>
+
+  <!-- Bootstrap CSS CDN -->
+  <!-- Our Custom CSS -->
+  <link rel="stylesheet" href="/css/exemplo1.css">
+
+  <!-- Font Awesome JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js" integrity="sha256-CutOzxCRucUsn6C6TcEYsauvvYilEniTXldPa6/wu0k=" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/bootstrap/5/css/bootstrap.min.css" />
+  <script src="/dmxAppConnect/dmxBootstrap5Navigation/dmxBootstrap5Navigation.js" defer></script>
+  <link rel="stylesheet" href="/fontawesome6/css/all.min.css" />
+  <script src="/dmxAppConnect/dmxBootstrap5Theme/dmxBootstrap5Theme.js" defer></script>
+  <link rel="stylesheet" href="/dmxAppConnect/dmxBootstrap5TableGenerator/dmxBootstrap5TableGenerator.css" />
+  <link rel="stylesheet" href="/dmxAppConnect/dmxDropzone/dmxDropzone.css" />
+  <script src="/dmxAppConnect/dmxDropzone/dmxDropzone.js" defer></script>
+  <script src="/dmxAppConnect/dmxFormatter/dmxFormatter.js" defer></script>
+  <link rel="stylesheet" href="/dmxAppConnect/dmxValidator/dmxValidator.css" />
+  <script src="/dmxAppConnect/dmxValidator/dmxValidator.js" defer></script>
+  <script src="/dmxAppConnect/dmxDataTraversal/dmxDataTraversal.js" defer></script>
+  <link rel="stylesheet" href="/dmxAppConnect/dmxNotifications/dmxNotifications.css" />
+  <script src="/dmxAppConnect/dmxNotifications/dmxNotifications.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify@4.17.7/dist/tagify.min.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify@4.17.7/dist/tagify.css" />
+  <script src="/dmxAppConnect/dmxTagify/dmxTagify.js" defer></script>
+  <script src="/dmxAppConnect/dmxBootstrap5Collapse/dmxBootstrap5Collapse.js" defer></script>
+  <script src="/dmxAppConnect/dmxBootstrap5Modal/dmxBootstrap5Modal.js" defer></script>
+  <script src="/dmxAppConnect/dmxMasonry/dmxMasonry.js" defer></script>
+  <script src="/dmxAppConnect/dmxBootstrap5PagingGenerator/dmxBootstrap5PagingGenerator.js" defer></script>
+  <script src="/dmxAppConnect/dmxBootstrap5Toasts/dmxBootstrap5Toasts.js" defer></script>
+  <script src="/socket.io/socket.io.js" defer></script>
+  <script src="/dmxAppConnect/dmxSockets/dmxSockets.js" defer></script>
+  <script src="/dmxAppConnect/dmxBootbox5/bootstrap-modbox.min.js" defer></script>
+  <script src="/dmxAppConnect/dmxBootbox5/dmxBootbox5.js" defer></script>
+  <script src="/dmxAppConnect/dmxFormRepeat/dmxFormRepeat.js" defer></script>
+  <link rel="stylesheet" href="/dmxAppConnect/dmxPreloader/dmxPreloader.css" />
+  <script src="/dmxAppConnect/dmxPreloader/dmxPreloader.js" defer></script>
+  <script src="/dmxAppConnect/dmxBootstrap5Offcanvas/dmxBootstrap5Offcanvas.js" defer></script>
+  <script src="/dmxAppConnect/dmxDatastore/dmxDatastore.js" defer></script>
+  <script src="/dmxAppConnect/dmxBrowser/dmxBrowser.js" defer></script>
+  <link rel="stylesheet" href="/dmxAppConnect/dmxDatePicker/daterangepicker.min.css" />
+  <script src="/dmxAppConnect/dmxDatePicker/daterangepicker.min.js" defer></script>
+  <link rel="stylesheet" href="/dmxAppConnect/dmxDatePicker/dmxDatePicker.css" />
+  <script src="/dmxAppConnect/dmxDatePicker/dmxDatePicker.js" defer></script>
+
+  <link rel="stylesheet" href="/dmxAppConnect/dmxDatePicker/bgthemes/bootstrap.css" />
+  <link rel="stylesheet" href="/dmxAppConnect/dmxSummernote/summernote-bs5.min.css" />
+  <script src="/dmxAppConnect/dmxSummernote/summernote-bs5.min.js" defer></script>
+  <script src="/dmxAppConnect/dmxSummernote/dmxSummernote.js" defer></script>
+  <script src="/dmxAppConnect/dmxSummernote/lang/summernote-pt-PT.min.js" defer></script>
+</head>
+
+<body is="dmx-app" id="adm">
+
+
+
+  <dmx-notifications id="notifies1"></dmx-notifications>
+  <div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar" class="sidebar">
+
+      <img>
+      <hr>
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+        </li>
+        <li>
+          <a class="nav-link" href="#">
+            <use href="#speedometer2"></use><i class="fa-solid fa-computer fa-fw fa-lg"></i>&nbsp;Dashboard
+          </a>
+        </li>
+        <li>
+        </li>
+        <li>
+        </li>
+        <li>
+          <a href="#" class="nav-link" internal="true">
+            <use href="#people-circle"></use><i class="fa-solid fa-user-group fa-lg fa-fw"></i>&nbsp;Usuários
+          </a>
+          <a href="#" class="nav-link" internal="true">
+            <use href="#people-circle"></use><i class="fa-solid fa-user-tie fa-lg fa-fw"></i>&nbsp;Profissões
+          </a>
+          <a href="#" class="nav-link" internal="true">
+            <use href="#people-circle"></use><i class="fa-solid fa-star fa-fw fa-lg"></i>&nbsp;Avaliações
+          </a>
+          <a href="#" class="nav-link" internal="true">
+            <use href="#people-circle"></use><i class="fa-solid fa-arrows-up-to-line fa-fw fa-lg"></i>&nbsp;Banners
+          </a>
+          <a href="#" class="nav-link" internal="true">
+            <use href="#people-circle"></use><i class="fa-solid fa-question fa-lg fa-fw"></i>&nbsp;FAQ
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="conteudo">
+
+      <nav class="navbar navbar-expand-lg bg-light">
+
+        <div class="container-fluid">
+
+          <button type="button" id="sidebarCollapse" class="btn btn-primary"><svg class="svg-inline--fa fa-align-left fa-w-14" aria-hidden="true" data-prefix="fas" data-icon="align-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+              <path fill="currentColor" d="M288 44v40c0 8.837-7.163 16-16 16H16c-8.837 0-16-7.163-16-16V44c0-8.837 7.163-16 16-16h256c8.837 0 16 7.163 16 16zM0 172v40c0 8.837 7.163 16 16 16h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16zm16 312h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm256-200H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16h256c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16z"></path>
+            </svg><!-- <i class="fas fa-align-left"></i> -->
+            <span>Ocultar</span></button>
+          <button class="btn btn-dark d-inline-block d-lg-none ms-auto" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+            <i class="fas fa-align-justify"></i>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ms-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#"><i class="fa-solid fa-gear"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-bell"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-user"></i></a>
+              </li>
+              <li class="nav-item">
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </nav><%- await include(content, locals); %>
+
+
+
+      <div class="line"></div>
+
+
+      <div class="line"></div>
+
+
+      <div class="line"></div>
+
+    </div>
+  </div>
+  <footer class="bg-success pt-2 pb-2">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1 class="text-center">Fancy display heading</h1>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- jQuery CDN - Slim version (=without AJAX) -->
+  <!-- Popper.JS -->
+  <!-- Bootstrap JS -->
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+  </script>
+  <script src="/bootstrap/5/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
